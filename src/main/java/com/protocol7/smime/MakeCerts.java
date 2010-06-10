@@ -76,12 +76,12 @@ public class MakeCerts {
         KeyPairGenerator kpg = KeyPairGenerator.getInstance("RSA", "BC");
         kpg.initialize(1024, new SecureRandom());
 
-        String signDN = "O=Callista, C=SE";
+        String signDN = "O=Acme, C=SE";
         KeyPair signKP = kpg.generateKeyPair();
         X509Certificate signCert = makeCertificate(signKP, signDN, signKP, signDN);
 
         
-        String origDN = "CN=Niklas Gustavsson, O=Callista, C=SE";
+        String origDN = "CN=Donald Duck, O=Acme, C=SE";
         KeyPair origKP = kpg.generateKeyPair();
         X509Certificate origCert = makeCertificate(origKP, origDN, signKP, signDN);
         

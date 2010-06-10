@@ -1,0 +1,5 @@
+Basic examples of how to work with S/MIME messages in Java. Adopted from the Bouncy Castle examples.
+
+1. Run com.protocol7.smime.MakeCerts to create a local keystore (stored in the file "keystore") 
+2. Run com.protocol7.smime.Sign to create a signed message (stored in the file "signed.message")
+3. Run com.protocol7.smime.Verify to verify the signed message. Will fail due to the certificate being non-trusted, but you get the point
